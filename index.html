@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Muli:300, 400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous">
+  	</script>
+  	<script src="math.min.js"></script>
+	<script src="scripts.js"></script>
+	<title>JavaScript Calculator</title>
+</head>
+<body>
+	<div class="container">
+	  <div class="calc-body">
+	    <div class="label">JS Calculator</div>
+	    <div class="errorMsg">
+	      <span class="limit">limit exceeded</span>
+	      <span class="solLimit">solution exceeded limit</span>
+	    </div>
+	    <div class="screen"></div>
+	    <div class="row">
+	      <button id="ac">AC</button>
+	      <button id="ce">CE</button>
+	      <!-- <button class="calcFunc" id="posNeg">&minus;&#47;&#43;</button> -->
+	      <button class="calcFunc" id="divide" value="/">&divide;</button>
+	    </div>
+	    <div class="row">
+	      <button class="calcFunc" id="7" value="7">7</button>
+	      <button class="calcFunc" id="8" value="8">8</button>
+	      <button class="calcFunc" id="9" value="9">9</button>
+	      <button class="calcFunc" id="multiply" value="*">&#42;</button>
+	    </div>
+	    <div class="row">
+	      <button class="calcFunc" id="4" value="4">4</button>
+	      <button class="calcFunc" id="5" value="5">5</button>
+	      <button class="calcFunc" id="6" value="6">6</button>
+	      <button class="calcFunc" id="minus" value="-">&minus;</button>
+	    </div>
+	    <div class="row">
+	      <button class="calcFunc" id="1" value="1">1</button>
+	      <button class="calcFunc" id="2" value="2">2</button>
+	      <button class="calcFunc" id="3" value="3">3</button>
+	      <button class="calcFunc" id="add" value="+">&#43;</button>
+	    </div>
+	    <div class="row">
+	      <button class="calcFunc" id="0" value="0">0</button>
+	      <button class="calcFunc" id="dot" value=".">	&sdot;</button>
+	      <button id="equal">&#61;</button>
+	    </div>
+	  </div>
+	</div>
+</body>
+</html>
