@@ -1,8 +1,4 @@
 $(document).ready(function(){
-  var bigmath = math.create({
-    number: 'BigNumber',
-    precision: 10
-  });
   var equation = '';
   var sol = 0;
   var nonNums = ["/", "*", "-", "+", "."];
@@ -81,18 +77,20 @@ $(document).ready(function(){
 
   // show the solution
   $('#equal').click(function(){
+    var equals = math.eval(equation);
+    sol = math.format(equals, {precision: 10});
     // if equation doesn't end w/ num, 
     // don't show solution yet
     if(nonNums.includes(equation.substr(equation.length-1))){
       return false;   
     // error message if solution exceeds limit
-    }else if(bigmath.eval(equation).toString().length >= 15){
+    }else if(sol.toString().length >= 15){
       $(".solLimit").show();
       $("button").focusout(function(){
         $(".solLimit").fadeOut();
       });
     }else{
-      sol = bigmath.eval(equation);
+      
       equation = '';
       equation += sol;
       $('.screen').text(equation);
