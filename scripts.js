@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  var bigmath = math.create({
+    number: 'BigNumber',
+    precision: 10
+  });
   var equation = '';
   var sol = 0;
   var nonNums = ["/", "*", "-", "+", "."];
@@ -82,18 +86,19 @@ $(document).ready(function(){
     if(nonNums.includes(equation.substr(equation.length-1))){
       return false;   
     // error message if solution exceeds limit
-    }else if(math.eval(equation).toString().length >= 15){
+    }else if(bigmath.eval(equation).toString().length >= 15){
       $(".solLimit").show();
       $("button").focusout(function(){
         $(".solLimit").fadeOut();
       });
     }else{
-      sol = math.eval(equation);
+      sol = bigmath.eval(equation);
       equation = '';
       equation += sol;
       $('.screen').text(equation);
       equalPressed = true;
       console.log(equation);
+      console.log("length: " + equation.length);
       console.log("= pressed: " + equalPressed);
     }  
   });
