@@ -82,7 +82,7 @@ $(document).ready(function(){
     if(nonNums.includes(equation.substr(equation.length-1))){
       return false;   
     // error message if solution exceeds limit
-    }else if(math.eval(equation).length >= 15){
+    }else if(math.eval(equation).toString().length >= 15){
       $(".solLimit").show();
       $("button").focusout(function(){
         $(".solLimit").fadeOut();
