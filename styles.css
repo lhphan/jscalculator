@@ -1,0 +1,64 @@
+body {
+  background-color: #F7F3E9;
+  color: #747E80;
+  font-family: 'Inconsolata', Helvetica, sans-serif;
+  /*font-weight: 400;*/
+  font-size: 16px;
+}
+h1 {
+  color: #F05945;
+}
+.calc-body {
+  background-color: #D5E1DD;
+  border: 1px solid #D5E1DD;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 10px 10px;
+  max-width: 400px;
+}
+.label {
+  float: left;
+  padding: 5px 10px 5px 0;
+}
+.errorMsg {
+  color: #000;
+  float: right;
+  padding: 5px 0 5px 10px;
+  text-align: right;
+  width: 50%;
+}
+.limit, .solLimit{
+  display: none;
+}
+.screen {
+  background-color: #fff;
+  clear: both;
+  font-size: 2em;
+  /*font-weight: 300;*/
+  height: 50px;
+  margin: 20px 0;
+  padding: 5px;
+  text-align: right;
+}
+.row {
+  margin-left: 0;
+}
+button {
+  background-color:#000;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Inconsolata', Helvetica, sans-serif;
+  /*font-weight: 300;*/
+  font-size: 1.2rem;
+  height: 50px;
+  margin: 5px 2px;
+  width: 20%;
+}
+#equal, #ac {
+  width: 48%;
+}
+#ac, #ce {
+  letter-spacing: 2px;
+}
