@@ -13,7 +13,7 @@ $(document).ready(function(){
   //show error message
   function showError(){
     $(".limit").show();
-    $("button").focusout(function(){
+    $("#ce, #ac, #equal").click(function(){
       $(".limit").fadeOut();
     });
   }
@@ -90,7 +90,7 @@ $(document).ready(function(){
     // error message if solution exceeds limit
     }else if(sol.toString().length >= 15){
       $(".solLimit").show();
-      $("button").focusout(function(){
+      $("#ce, #ac, #divid, #multiply, #dot, #add, #minus").click(function(){
         $(".solLimit").fadeOut();
       });
     }else{
