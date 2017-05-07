@@ -79,9 +79,13 @@ $(document).ready(function(){
   $('#equal').click(function(){
     var equals = math.eval(equation);
     sol = math.format(equals, {precision: 10});
+    // equation cannot be empty
+    if(equation.length === 0){
+      return false;
+    }
     // if equation doesn't end w/ num, 
     // don't show solution yet
-    if(nonNums.includes(equation.substr(equation.length-1))){
+    else if(nonNums.includes(equation.substr(equation.length-1))){
       return false;   
     // error message if solution exceeds limit
     }else if(sol.toString().length >= 15){
