@@ -12,48 +12,55 @@ h1 {
   color: #F05945;
 }
 .calc-body {
-  /*background-color: #D5E1DD;*/
-  border: 1px solid #D5E1DD;
-  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  box-shadow: 0px 0px 63px -6px rgba(59, 60, 66, 0.3);
   margin: 20px auto;
   padding: 10px 10px;
   max-width: 400px;
+  min-width: 240px;
 }
 .label {
   color: #fff;
   float: left;
-  padding: 5px 10px 5px 0;
+  padding: 5px 10px 10px 0;
 }
 .errorMsg {
   color: #000;
-  /*float: right;*/
-  font-size: 0.8rem;
-  /*margin-bottom: 5px;*/
-  /*padding: 5px 0 5px 10px;*/
+  font-size: 0.7rem;
+  height: 20px;
   text-align: right;
-  /*width: 50%;*/
+  text-transform: uppercase;
 }
 .limit, .solLimit{
   display: none;
 }
 .screen {
   background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 2px;
   clear: both;
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 300;
-  height: 50px;
-  margin: 20px 0;
+  height: 60px;
+  margin: 20px 0 15px 0;
   padding: 5px;
   text-align: right;
 }
 .row {
-  margin-left: 0;
   text-align: justify;
+  margin-bottom: -18px;
+  margin-left: 0;
+}
+.row:after {
+  content: '';
+  display: inline-block;
+  width: 99.5%
 }
 button {
-  /*background-color:#000;*/
-  background-color: Transparent;
-  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.10);
+  /*border: 1px solid rgba(255, 255, 255, 0.75);*/
+  border: none;
   box-sizing: border-box;
   border-radius: 5px;
   color: #fff;
@@ -61,12 +68,36 @@ button {
   font-weight: 300;
   font-size: 1.2rem;
   height: 50px;
-  margin: 5px 2px;
-  width: 20%;
+  margin: 2px 0;
+  width: 24%;
 }
+
 #equal, #ac {
-  width: 48%;
+  width: 49%;
 }
 #ac, #ce {
   letter-spacing: 2px;
+}
+
+@media (max-width: 400px){
+  .calc-body {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 349px) {
+  .screen {
+    font-size: 1.6rem;
+  }
+  .row {
+    margin-bottom: -15px;
+  }
+  button {
+    font-size: 1rem;
+    width: 22%;
+  }
+  #equal, #ac {
+  width: 48%;
+}
 }
