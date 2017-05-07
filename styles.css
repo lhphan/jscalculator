@@ -1,7 +1,10 @@
 body {
-  background-color: #F7F3E9;
+  /* BG gradient from https://uigradients.com */
+  background: #085078;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #85D8CE, #085078);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #85D8CE, #085078); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #747E80;
-  font-family: 'Inconsolata', Helvetica, sans-serif;
+  font-family: 'Muli', Helvetica, sans-serif;
   /*font-weight: 400;*/
   font-size: 16px;
 }
@@ -9,7 +12,7 @@ h1 {
   color: #F05945;
 }
 .calc-body {
-  background-color: #D5E1DD;
+  /*background-color: #D5E1DD;*/
   border: 1px solid #D5E1DD;
   border-radius: 10px;
   margin: 20px auto;
@@ -17,15 +20,18 @@ h1 {
   max-width: 400px;
 }
 .label {
+  color: #fff;
   float: left;
   padding: 5px 10px 5px 0;
 }
 .errorMsg {
   color: #000;
-  float: right;
-  padding: 5px 0 5px 10px;
+  /*float: right;*/
+  font-size: 0.8rem;
+  /*margin-bottom: 5px;*/
+  /*padding: 5px 0 5px 10px;*/
   text-align: right;
-  width: 50%;
+  /*width: 50%;*/
 }
 .limit, .solLimit{
   display: none;
@@ -34,7 +40,7 @@ h1 {
   background-color: #fff;
   clear: both;
   font-size: 2em;
-  /*font-weight: 300;*/
+  font-weight: 300;
   height: 50px;
   margin: 20px 0;
   padding: 5px;
@@ -42,15 +48,17 @@ h1 {
 }
 .row {
   margin-left: 0;
+  text-align: justify;
 }
 button {
-  background-color:#000;
+  /*background-color:#000;*/
+  background-color: Transparent;
   border: 1px solid #fff;
   box-sizing: border-box;
   border-radius: 5px;
   color: #fff;
-  font-family: 'Inconsolata', Helvetica, sans-serif;
-  /*font-weight: 300;*/
+  font-family: 'Muli', Helvetica, sans-serif;
+  font-weight: 300;
   font-size: 1.2rem;
   height: 50px;
   margin: 5px 2px;

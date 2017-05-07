@@ -6,8 +6,8 @@ $(document).ready(function(){
   
   //display entry on the screen 
   function displayEntry(pressed){
-    $(".screen").append(pressed);
-    console.log("length: " + $(".screen").text().length);
+    $(".entries").append(pressed);
+    console.log("length: " + $(".entries").text().length);
   }
 
   //show error message
@@ -37,7 +37,7 @@ $(document).ready(function(){
       }else if(equalPressed === true && nonNums.includes(this.value) === false){
         equation = '';
         equation += this.value;
-        $(".screen").text(equation);
+        $(".entries").text(equation);
         equalPressed = false;
         console.log("the equation is " + equation);
         console.log("= pressed: " + equalPressed);
@@ -53,7 +53,7 @@ $(document).ready(function(){
   }
 
   $('#ac').click(function(){
-    $('.screen').empty();
+    $('.entries').empty();
     equation = '';
     equalPressed = false;
     console.log("= pressed: " + equalPressed);
@@ -63,14 +63,14 @@ $(document).ready(function(){
   $('#ce').click(function(){
     // if = was just pressed, treat CE as AC
     if(equalPressed === true){
-      $('.screen').empty();
+      $('.entries').empty();
       equation = '';
       equalPressed = false;
       console.log("the equation is " + equation);
       console.log("= pressed: " + equalPressed);
     }else{
       equation = equation.slice(0,-1);
-      $('.screen').text(equation);  
+      $('.entries').text(equation);  
       console.log("the equation is " + equation);
     }
   });
@@ -97,7 +97,7 @@ $(document).ready(function(){
       
       equation = '';
       equation += sol;
-      $('.screen').text(equation);
+      $('.entries').text(equation);
       equalPressed = true;
       console.log(equation);
       console.log("length: " + equation.length);
