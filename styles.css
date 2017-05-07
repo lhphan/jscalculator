@@ -82,6 +82,9 @@ button {
 }
 
 @media (max-width: 400px){
+  .screen, button {
+    font-weight: 400;
+  }
   .calc-body {
     border: none;
     box-shadow: none;
