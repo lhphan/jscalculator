@@ -4,8 +4,8 @@ body {
   background: -webkit-linear-gradient(to left, #85D8CE, #085078);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #85D8CE, #085078); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #747E80;
-  font-family: 'Muli', Helvetica, sans-serif;
-  /*font-weight: 400;*/
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-weight: 400;
   font-size: 16px;
 }
 h1 {
@@ -23,17 +23,19 @@ h1 {
 .label {
   color: #fff;
   float: left;
+  font-weight: 100;
   padding: 5px 10px 10px 0;
 }
 .errorMsg {
-  color: #000;
   font-size: 0.7rem;
+  font-weight: 400;
   height: 20px;
   text-align: right;
   text-transform: uppercase;
 }
 .limit, .solLimit{
   display: none;
+  letter-spacing: 0;
 }
 .screen {
   background-color: #fff;
@@ -41,7 +43,8 @@ h1 {
   border-radius: 2px;
   clear: both;
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 100;
+  letter-spacing: 2px;
   height: 60px;
   margin: 20px 0 15px 0;
   padding: 5px;
@@ -59,13 +62,12 @@ h1 {
 }
 button {
   background-color: rgba(255, 255, 255, 0.10);
-  /*border: 1px solid rgba(255, 255, 255, 0.75);*/
   border: none;
   box-sizing: border-box;
   border-radius: 5px;
   color: #fff;
-  font-family: 'Muli', Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-weight: 100;
   font-size: 1.2rem;
   height: 50px;
   margin: 2px 0;
