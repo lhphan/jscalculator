@@ -47,7 +47,11 @@ $(document).ready(function(){
         console.log("the equation is " + equation);
         equalPressed = false;
         console.log("= pressed: " + equalPressed);
-        displayEntry(key);
+        if(this.value === "*"){
+          displayEntry("x");
+        }else{
+          displayEntry(key);
+        }   
       }
     });
   }
