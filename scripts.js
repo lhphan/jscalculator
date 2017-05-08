@@ -97,8 +97,7 @@ $(document).ready(function(){
       $("#ce, #ac, #divid, #multiply, #dot, #add, #minus").click(function(){
         $(".solLimit").fadeOut();
       });
-    }else{
-      
+    }else{ 
       equation = '';
       equation += sol;
       $('.entries').text(equation);
