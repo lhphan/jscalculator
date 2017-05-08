@@ -24,6 +24,7 @@ h1 {
   color: #fff;
   float: left;
   font-weight: 100;
+  letter-spacing: 1px;
   padding: 5px 10px 10px 0;
 }
 .errorMsg {
@@ -75,7 +76,7 @@ button {
 }
 
 #equal, #ac {
-  width: 49%;
+  width: 49.5%;
 }
 #ac, #ce {
   letter-spacing: 2px;
