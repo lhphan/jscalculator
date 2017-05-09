@@ -23,11 +23,11 @@ $(document).ready(function(){
     $(".calcFunc").click(function(){
       // don't allow consecutive operants to be pressed
       if(nonNums.includes(equation.substr(equation.length-1)) && nonNums.includes(this.value)){
-        console.log('double operant');
+        console.log("double operant");
         return false;
       // first entry cannot be an operant
       }else if(equation.length === 0 && nonNums.includes(this.value)){
-        console.log('first entry cannot be operant');
+        console.log("first entry cannot be operant");
         return false;
       // equation cannot exceed 15 characters   
       }else if(equation.length >= 15){
@@ -49,6 +49,8 @@ $(document).ready(function(){
         console.log("= pressed: " + equalPressed);
         if(this.value === "*"){
           displayEntry("x");
+        }else if(this.value === "/"){
+          displayEntry("&divide;");
         }else{
           displayEntry(key);
         }   
@@ -56,31 +58,31 @@ $(document).ready(function(){
     });
   }
 
-  $('#ac').click(function(){
-    $('.entries').empty();
+  $("#ac").click(function(){
+    $(".entries").empty();
     equation = '';
     equalPressed = false;
     console.log("= pressed: " + equalPressed);
   });
 
   //delete previous entry
-  $('#ce').click(function(){
+  $("#ce").click(function(){
     // if = was just pressed, treat CE as AC
     if(equalPressed === true){
-      $('.entries').empty();
+      $(".entries").empty();
       equation = '';
       equalPressed = false;
       console.log("the equation is " + equation);
       console.log("= pressed: " + equalPressed);
     }else{
       equation = equation.slice(0,-1);
-      $('.entries').text(equation);  
+      $(".entries").text(equation);  
       console.log("the equation is " + equation);
     }
   });
 
   // show the solution
-  $('#equal').click(function(){
+  $("#equal").click(function(){
     var equals = math.eval(equation);
     sol = math.format(equals, {precision: 10});
     // equation cannot be empty
@@ -100,7 +102,7 @@ $(document).ready(function(){
     }else{ 
       equation = '';
       equation += sol;
-      $('.entries').text(equation);
+      $(".entries").text(equation);
       equalPressed = true;
       console.log(equation);
       console.log("length: " + equation.length);
